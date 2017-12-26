@@ -1,0 +1,26 @@
+{
+  "name": "ethereum-notary-contracts",
+  "version": "1.0.0",
+  "description": "Solidity contracts for writing and reading document hashes",
+  "main": "build/contracts/NotaryStore.json",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dadeg/ethereum-notary-contracts.git"
+  },
+  "keywords": [
+    "ethereum",
+    "notary"
+  ],
+  "author": "Dan DeGreef",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dadeg/ethereum-notary-contracts/issues"
+  },
+  "homepage": "https://github.com/dadeg/ethereum-notary-contracts#readme"
+}
