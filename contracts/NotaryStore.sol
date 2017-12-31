@@ -4,13 +4,13 @@ contract NotaryStore {
 
   event Entry(
     address indexed signer,
-    string indexed documentHash
+    bytes32 indexed documentHash
   );
 
   /**
     create a new Entry in the logs.
    */
-  function create(string documentHash) public returns (bool) {
+  function create(bytes32 documentHash) public returns (bool) {
     Entry(msg.sender, documentHash);
     return true;
   }
