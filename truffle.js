@@ -9,7 +9,7 @@ module.exports = {
       network_id: 3,
       host: "localhost",
       port: 8545,
-      gas: 4612388
+      gas: 4212388
     }
   },
   rpc: {
