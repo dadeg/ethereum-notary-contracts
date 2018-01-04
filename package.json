@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/dadeg/ethereum-notary-contracts/issues"
   },
-  "homepage": "https://github.com/dadeg/ethereum-notary-contracts#readme"
+  "homepage": "https://github.com/dadeg/ethereum-notary-contracts#readme",
+  "dependencies": {
+    "truffle-hdwallet-provider": "0.0.3"
+  }
 }
