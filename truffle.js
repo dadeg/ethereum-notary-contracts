@@ -1,5 +1,10 @@
 var HDWalletProvider = require("truffle-hdwallet-provider");
 
+// this secrets file is not included in the git repo. add it yourself with your secrets for deploys.
+var secrets = require("./secrets.json");
+var infuraApiKey = secrets.ropsten.infuraApiKey;
+var mnemonic = secrets.ropsten.mnemonic;
+
 module.exports = {
   networks: {
     development: {
@@ -9,7 +14,7 @@ module.exports = {
     },
     ropsten: {
       network_id: 3,
-      provider: new HDWalletProvider(mnemonic, "https://ropsten.infura.io/" + infura_apikey),
+      provider: new HDWalletProvider(mnemonic, "https://ropsten.infura.io/" + infuraApiKey),
       gas: 4100000
     }
   },
