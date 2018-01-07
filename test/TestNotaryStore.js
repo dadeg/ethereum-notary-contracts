@@ -33,6 +33,12 @@ contract('NotaryStore', function (accounts) {
     });
   });
 
+  it("should fail to create if no payment is sent", function () {
+    return NotaryStore.deployed().then(function (instance) {
+      return expectThrow(instance.create(foobarHash));
+    });
+  });
+
   it("should return the cost", function () {
     return NotaryStore.deployed().then(function (instance) {
       return instance.cost.call();
@@ -114,7 +120,7 @@ contract('NotaryStore', function (accounts) {
   it("should allow withdrawal only from owner", function () {
     // The owner is actually accounts[1] at this point because we set it in the test above.
     return NotaryStore.deployed().then(function (instance) {
-      return expectThrow(contractInstance.withdraw({ from: accounts[0] }));
+      return expectThrow(instance.withdraw({ from: accounts[0] }));
     });
   });
 });
