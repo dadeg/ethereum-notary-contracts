@@ -28,7 +28,7 @@ contract NotaryStore {
   /**
     create a new Entry in the logs.
    */
-  function create(bytes32 documentHash) public payable costs {
+  function create(bytes32 documentHash) public payable costs returns (bool) {
     Entry(msg.sender, documentHash);
   }
 
